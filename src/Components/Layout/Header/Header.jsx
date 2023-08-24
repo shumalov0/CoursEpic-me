@@ -1,10 +1,178 @@
+import React, { useRef } from "react";
+import Buttonn from "./ToggleButton";
+import module from "./Header.module.css";
+import Logo from "../../Assets/Svg/coursEpicLogo.svg";
+import bottom from "../../Assets/Svg/bottom.svg";
+import top from "../../Assets/Svg/top.svg";
+import { Link } from "react-router-dom";
+import earth from "../../Assets/Svg/earth.svg";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-import React from 'react'
 
 const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef();
+  const buttonRef = useRef();
+  const [openPopUp, setOpenPopUp] = useState(false);
+  const popupDetail = [
+    {
+      id: 1,
+      color: "#F6F1F8",
+      path: "/course",
+      coursName: "Kurslar",
+      coursDetail:
+        "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
+    },
+    {
+      id: 2,
+      color: "#F6F1F8",
+      path: "/live",
+      coursName: "Canlı Yayımlar",
+      coursDetail:
+        "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
+    },
+    {
+      id: 3,
+      color: "#F6F1F8",
+      path: "/facetoface",
+      coursName: "1:1 ",
+      coursDetail:
+        "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
+    },
+    {
+      id: 4,
+      color: "#F6F1F8",
+      path: "/digitalproduct",
+      coursName: "Digital ürünlər",
+      coursDetail:
+        "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
+    },
+    {
+      id: 5,
+      color: "#F6F1F8",
+      path: "/folowers",
+      coursName: "Abunəliklər",
+      coursDetail:
+        "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
+    },
+  ];
+  const Language = [
+    {
+      id: "1",
+      language: "Azərbaycan",
+    },
+    {
+      id: "2",
+      language: "English",
+    },
+    {
+      id: "3",
+      language: "Polish",
+    },
+    {
+      id: "4",
+      language: "Rusiya",
+    },
+  ];
 
-export default Header
+  window.addEventListener("click", (e) => {
+    if (e.target !== menuRef.current && e.target !== buttonRef.current) {
+      setOpenPopUp(false);
+    }
+  });
+  // window.addEventListener("click", (e) => {
+  //   if (e.target !== langRef.current && e.target !== langButtonRef.current) {
+  //     setLanguageButton(false);
+  //   }
+  // });
+
+  const [langButton, setLanguageButton] = useState(false);
+  const langRef = useRef();
+  const langButtonRef = useRef();
+
+  return (
+    <section className={module.Header}>
+      <nav className={module.navBar}>
+        <div className="container">
+          <div className={module.NavDetail}>
+            <div className={module.Logo}>
+              <Link to="/">
+                <img src={Logo} alt="CoursEpicLogo" />
+              </Link>
+            </div>
+            <div className={module.Menu}>
+              <Link
+                className={module.popButton}
+                onClick={() => setOpenPopUp((prevtwo) => !prevtwo)}
+              >
+                <span ref={buttonRef} onClick={() => setOpen((prev) => !prev)}>
+               
+                  Product
+                </span>
+                {!open ? (
+                  <img src={top} alt="Top" />
+                ) : (
+                  <img src={bottom} alt="Bottom" />
+                )}
+              </Link>
+              {!openPopUp ? (
+                openPopUp
+              ) : (
+                <div ref={menuRef} className={module.MenuPopup}>
+                  <div className={module.PopupContainer}>
+                    {popupDetail.map((item, key) => (
+                      <Link to={item.path} onClick={() => setOpenPopUp(false)}>
+                        <div key={key} className={module.poupMain}>
+                          <h1>{item.coursName}</h1>
+                          <p>{item.coursDetail}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <Link to="/career"> Career</Link>
+              <Link to="/about"> About</Link>
+              <Link to="/price"> Qiymətləndirmə</Link>
+              <div>
+                <Buttonn />
+              </div>
+            </div>
+            <div className={module.LoginSing}>
+              <Link to="/login">Daxil ol</Link>
+              <Link to="/register">Qeydiyyat</Link>
+            </div>
+
+            <div
+              ref={langButtonRef}
+              onClick={() => setLanguageButton((elf) => !elf)}
+              className={module.Language}
+       
+            >
+              <span   >
+              <img src={earth} alt="earth" />
+              </span>
+            </div>
+            {!langButton ? (
+              setLanguageButton
+            ) : (
+              <div ref={langButtonRef} className={module.LanguagePopup}>
+                {Language.map((item, key) => (
+                  <div  key={key} className={module.popupItem}>
+                    <Link  onClick={() => setLanguageButton(false)}>
+                      {item.language}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </nav>
+    </section>
+  );
+};
+
+export default Header;

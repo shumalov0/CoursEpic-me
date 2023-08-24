@@ -1,0 +1,62 @@
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url('../Font/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf')
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 730px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}

@@ -8,6 +8,9 @@ import DigitalProduct from '../Pages/DigitalProduct/DigitalProduct'
 import Price from '../Pages/Price/Price'
 import ErorrPage from '../Pages/ErorrPage/ErorrPage'
 import ProductDetail from '../Pages/DigitalProduct/DigitalProduct'
+import Login from '../Pages/Login/Login'
+import Register from '../Pages/Register/Register'
+
 
 import { Route, Routes } from 'react-router-dom'
 const Router = () => {
@@ -19,6 +22,8 @@ const Router = () => {
             <Route path='/career' element={<Career/>} />
             <Route path='/price' element={<Price/>} />
             <Route path='/course' element={<Course/>} />
+            <Route path='/register' element={<Register/>} />
+            <Route path='/login' element={<Login/>} />
             <Route path='/digitalproduct' element={<DigitalProduct/>} />
             <Route path='/course/:id' element={<ProductDetail/>} />
             <Route path='*' element={<ErorrPage/>} />
