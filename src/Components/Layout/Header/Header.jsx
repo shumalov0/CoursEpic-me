@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Buttonn from "./ToggleButton";
 import module from "./Header.module.css";
 import Logo from "../../Assets/Svg/coursEpicLogo.svg";
@@ -7,11 +7,33 @@ import top from "../../Assets/Svg/top.svg";
 import { Link } from "react-router-dom";
 import earth from "../../Assets/Svg/earth.svg";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import {FaBars } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
+
 
 
 const Header = () => {
+  useEffect(()=>{
+ 
+
+    let handler = (event)=>{
+      if(event.target !== langRef.current  ){
+        setLanguageButton(false)
+      }
+    }
+
+    
+
+
+    document.addEventListener('mousedown',handler)
+
+
+
+  
+  })
+  const [closeButton ,setOpenButton]= useState(false)
   const [open, setOpen] = useState(false);
+
   const menuRef = useRef();
   const buttonRef = useRef();
   const [openPopUp, setOpenPopUp] = useState(false);
@@ -43,7 +65,7 @@ const Header = () => {
     {
       id: 4,
       color: "#F6F1F8",
-      path: "/digitalproduct",
+      path: "/digitalmarketing",
       coursName: "Digital ürünlər",
       coursDetail:
         "Uğurlu olmağın üçün təhsil və şəxsi inkişaf ehtiyaclarını qarşılayırıq.",
@@ -93,15 +115,16 @@ const Header = () => {
 
   return (
     <section className={module.Header}>
-      <nav className={module.navBar}>
+      <nav className={module.navBar} id={closeButton ? "relative":""} >
         <div className="container">
-          <div className={module.NavDetail}>
+          <div className={`${module.NavDetail}`}>
             <div className={module.Logo}>
-              <Link to="/">
+              <Link onClick={()=>setOpenButton(false)}  to="/">
                 <img src={Logo} alt="CoursEpicLogo" />
               </Link>
             </div>
-            <div className={module.Menu}>
+            
+            <div className={module.Menu} id={closeButton ? "hidden":""} >
               <Link
                 className={module.popButton}
                 onClick={() => setOpenPopUp((prevtwo) => !prevtwo)}
@@ -122,8 +145,8 @@ const Header = () => {
                 <div ref={menuRef} className={module.MenuPopup}>
                   <div className={module.PopupContainer}>
                     {popupDetail.map((item, key) => (
-                      <Link to={item.path} onClick={() => setOpenPopUp(false)}>
-                        <div key={key} className={module.poupMain}>
+                      <Link to={item.path} onClick={() => setOpenPopUp(false)} >
+                        <div  onClick={() => setOpenButton(false)} key={key} className={module.poupMain}>
                           <h1>{item.coursName}</h1>
                           <p>{item.coursDetail}</p>
                         </div>
@@ -133,32 +156,33 @@ const Header = () => {
                 </div>
               )}
 
-              <Link to="/career"> Career</Link>
-              <Link to="/about"> About</Link>
-              <Link to="/price"> Qiymətləndirmə</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/career"> Career</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/about"> About</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/price"> Qiymətləndirmə</Link>
               <div>
                 <Buttonn />
               </div>
             </div>
-            <div className={module.LoginSing}>
-              <Link to="/login">Daxil ol</Link>
-              <Link to="/register">Qeydiyyat</Link>
+            <div className={module.LoginSing} id={closeButton ? "hidden":""}>
+              <Link onClick={()=>setOpenButton(false)} to="/login">Daxil ol</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/register">Qeydiyyat</Link>
             </div>
+ 
 
             <div
               ref={langButtonRef}
-              onClick={() => setLanguageButton((elf) => !elf)}
+              onClick={() => setLanguageButton(() => !langButton)}
               className={module.Language}
        
             >
-              <span   >
+              <span>
               <img src={earth} alt="earth" />
               </span>
             </div>
             {!langButton ? (
               setLanguageButton
             ) : (
-              <div ref={langButtonRef} className={module.LanguagePopup}>
+              <div ref={langRef} className={module.LanguagePopup}>
                 {Language.map((item, key) => (
                   <div  key={key} className={module.popupItem}>
                     <Link  onClick={() => setLanguageButton(false)}>
@@ -168,6 +192,15 @@ const Header = () => {
                 ))}
               </div>
             )}
+            <div  onClick={()=>setOpenButton(!closeButton)}  className={module.bar} >
+              
+                  {!closeButton ?
+                  ( <FaBars/>):
+                  (<GrClose/>)
+                  }
+      
+              
+            </div>
           </div>
         </div>
       </nav>
