@@ -12,7 +12,10 @@
   z-index: 10;
 
 }
+.bar{
+  display: none;
 
+}
 .NavDetail {
   display: flex;
   align-items: center;
@@ -325,21 +328,31 @@ text-decoration: none;
 
 
 @media screen and (max-width:768px) {
- 
-  .navBar{
+
+  .bar{
+  display: block !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  }
+  .navBar {
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    /* left: 0; */
+    min-height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 100vh;
     width: 100% !important;
-    right: 0;
+    /* right: 0; */
+    /* background-color: aqua; */
     padding: 10px 0;
     border-bottom: 2px solid transparent;
     -webkit-backdrop-filter: saturate(1) blur(20px) !important;
     backdrop-filter: saturate(1) blur(20px) !important;
     transition: 0.3s !important;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
-
     z-index: 10;
     visibility: visible;
 }
@@ -347,7 +360,7 @@ text-decoration: none;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   gap: 40px;
 
@@ -358,14 +371,66 @@ text-decoration: none;
   flex-direction: column;
   gap: 30px;
 }
-.PopupContainer{
-  max-width: 535px;
+.PopupContainer {
+  max-width: 530px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   justify-content: center;
   z-index: 9999;
+}
+.Language{
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+}
+
+.LanguagePopup {
+  position: absolute;
+  top: 53px;
+  width: 146px;
+  left: 10px;
+  height: 197px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ffffff;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  box-shadow: -4px 4px 12px -6px rgba(0,0,0,0.83);
+  -webkit-box-shadow: -4px 4px 12px -6px rgba(0,0,0,0.83);
+  -moz-box-shadow: -4px 4px 12px -6px rgba(0,0,0,0.83);
+}
+
+.Menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.Logo img{
+ width: 80%;
+}
+
+
+.MenuPopup {
+  width: 440px;
+  height: 100%;
+  /* height: 373px; */
+  border-radius: 19px;
+  position: relative;
+  background: #ffffff;
+  top: 0px;
+  display: flex;
+  box-shadow: -2px 5px 11px -4px rgba(0,0,0,0.69);
+  -webkit-box-shadow: -2px 5px 11px -4px rgba(0,0,0,0.69);
+  -moz-box-shadow: -2px 5px 11px -4px rgba(0,0,0,0.69);
 }
 }
