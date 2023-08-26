@@ -1,0 +1,134 @@
+.HomeSection1{
+
+    background-color:  #AFE9FF;
+
+}
+
+.main{
+ 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+
+}
+
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 728.564px;
+    gap: 25px;
+
+}
+
+.left p{
+    color: #000;
+    font-family: Space Grotesk;
+    font-size: 28.227px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 127%; /* 65.059px */
+}
+.left span{
+    color: #1F1515;
+    font-family: Jost;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 392px;
+    line-height: 160%;
+}
+
+.left a{
+    width: 175px;
+    height: 49px;
+    flex-shrink: 0;
+    border-radius: 41.266px;
+    background: #8828FF;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 33.151px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+.right{
+
+    display: flex;
+   }
+   
+   .Image{
+ max-width: 700px;
+}
+
+.Image img {
+ width: 100%;
+
+}
+
+@media screen and (max-width:1024px){
+
+    .left p {
+        color: #000;
+        font-family: Space Grotesk;
+        font-size: 17.227px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 127%;
+    }
+    .left span {
+        color: #1F1515;
+        font-family: Jost;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        max-width: 392px;
+        line-height: 160%;
+    }
+    .left a {
+        width: 134px;
+        height: 46px;
+        flex-shrink: 0;
+        border-radius: 41.266px;
+        background: #8828FF;
+        color: #FFF;
+        font-family: Jost;
+        font-size: 27.151px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (max-width:768px){
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+         width: auto;
+        text-align: center;
+        gap: 25px;
+        align-items: center;
+    }
+    .Image {
+        max-width: 568px;
+    }
+}
