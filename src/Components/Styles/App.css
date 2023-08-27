@@ -30,6 +30,52 @@ padding: 30px 0;
 }
 
 
+.slick-prev:before,
+ .slick-next:before {
+    font-family: 'slick';
+    font-size: 36px !important;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.slick-prev {
+    left: -50px !important;
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 54% !important;
+   z-index: 99999;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 4px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-next {
+  right: -35px;
+}
+
+.slick-initialized .slick-slide div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 960px;
@@ -37,8 +83,28 @@ padding: 30px 0;
     margin: 0 auto;
     width: 100%;
   }
+  .slick-prev {
+    left: -18px !important;
+}
+.slick-next {
+  right: -17px !important;
+}
+
 }
 @media screen and (max-width: 768px) {
+
+
+
+.slick-initialized .slick-slide div:nth-child(1) {
+  display: flex !important;
+  justify-content: center !important;
+  max-width: 300px !important;
+}
+.slick-initialized .slick-slide {
+  display: block !important;
+  display: flex !important;
+  justify-content: center !important;
+}
   .container {
     padding: 0;
     max-width: 730px;
@@ -70,6 +136,30 @@ padding: 30px 0;
 
   }
 
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 53% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 4px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-next {
+  right: 10px !important;
+}
+.slick-prev {
+  left: 10px !important;
+}
 }
 @media screen and (max-width: 576px) {
   .container {
@@ -99,4 +189,5 @@ padding: 30px 0;
     margin: 0 auto;
   }
 }
+
 

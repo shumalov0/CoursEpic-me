@@ -6,7 +6,7 @@ import cardimg from '../../../../Assets/picture/cardImg.png'
 
 const CourseCard = () => {
   return (
-    <>
+   
       <div className={module.Card}>
         <div className={module.CardImage}>
           <img src={cardimg} alt='cardimg' />
@@ -37,7 +37,7 @@ const CourseCard = () => {
             </div>
         </div>
       </div>
-    </>
+  
   );
 };
 

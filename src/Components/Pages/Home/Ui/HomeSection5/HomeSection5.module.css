@@ -27,6 +27,7 @@
 
 .CardDetail{
 padding: 14px;
+gap: 20px;
 display: flex;
 flex-direction: column;
 
@@ -38,6 +39,7 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border-bottom: 1px solid  #E9EAF0 !important;
 
 }
 .category{
@@ -98,4 +100,87 @@ line-height: 22px; /* 137.5% */
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.star{
+  display: flex;
+  align-items: center;
+}
+
+.star img{
+
+    width: 25px;
+}
+
+.star span{
+    color: var(--gray-700, #4E5566);
+    font-family: Inter;
+    font-size: 12.996px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.565px; /* 142.857% */
+    letter-spacing: -0.13px;
+}
+
+
+.users{
+
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+
+.users img{
+    width: 20px;
+}
+.users p{
+    color: var(--gray-700, #4E5566);
+    font-family: Inter;
+    font-size: 12.996px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.565px; /* 142.857% */
+    letter-spacing: -0.13px;
+}
+.users span{
+    color: var(--gray-500, #8C94A3);
+    font-family: Inter;
+    font-size: 12.996px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.422px; /* 157.143% */
+    letter-spacing: -0.13px;
+}
+
+
+.price {
+ display: flex;
+ align-items: center;
+    border-top: 1px solid  #E9EAF0 !important;
+    height: 42px;
+}
+.price h2{
+
+    color: var(--primary-500, #FF6636);
+font-family: Inter;
+font-size: 16.709px;
+font-style: normal;
+font-weight: 600;
+line-height: 22.278px; /* 133.333% */
+}
+
+
+
+@media screen and (max-width:768px){
+    .Card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 399px;
+        width: 279px;
+        background-color: #fff;
+    }
+
 }
