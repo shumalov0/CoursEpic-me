@@ -11,176 +11,175 @@
   background-color: #fff;
 }
 
-
-.CardImage{
-    max-width: 290px;
-    max-height: 217.211px;
+.CardImage {
+  max-width: 290px;
+  max-height: 217.211px;
 }
 
-.CardImage img{
-
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    background-repeat: no-repeat;
+.CardImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
-.CardDetail{
-padding: 14px;
-gap: 20px;
-display: flex;
-flex-direction: column;
-
-
+.CardDetail {
+  padding: 14px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.cardBox1{
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-bottom: 1px solid  #E9EAF0 !important;
-
+.cardBox1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #e9eaf0 !important;
 }
-.category{
- display: flex;
- align-items: center;
- justify-content: space-between;
+.category {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between;
 }
 
-.category span:nth-child(1){
-    color: var(--secondary-700, #342F98);
+.category span:nth-child(1) {
+  color: var(--secondary-700, #342f98);
 
-    /* Labal/Small */
-    font-family: Inter;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 12px; /* 120% */
-    text-transform: uppercase;
-    display: flex;
-padding: 6.713px 7.57px;
-justify-content: center;
-align-items: center;
-gap: 9.283px;
-background: var(--secondary-100, #EBEBFF);
+  /* Labal/Small */
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  text-transform: uppercase;
+  display: flex;
+  padding: 6.713px 7.57px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.283px;
+  background: var(--secondary-100, #ebebff);
 }
-.category span:nth-child(2){
-    color: var(--secondary-700, #342F98);
+.category span:nth-child(2) {
+  color: var(--secondary-700, #342f98);
 
-    /* Labal/Small */
-    font-family: Inter;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 12px; /* 120% */
-    text-transform: uppercase;
-    display: flex;
-padding: 6.713px 7.57px;
-justify-content: center;
-align-items: center;
-gap: 9.283px;
-background: #AFE9FF;
-color: #005372;
+  /* Labal/Small */
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  text-transform: uppercase;
+  display: flex;
+  padding: 6.713px 7.57px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.283px;
+  background: #afe9ff;
+  color: #005372;
 }
-.CardName{
- display: flex;
- justify-content: center;
- color: var(--gray-900, #1D2026);
+.CardName {
+  display: flex;
+  justify-content: center;
+  color: var(--gray-900, #1d2026);
 
-/* Body Large/500 */
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px; /* 137.5% */
+  /* Body Large/500 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
 }
-.cardBox2{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.cardBox2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-.star{
+.star {
   display: flex;
   align-items: center;
 }
 
-.star img{
-
-    width: 25px;
+.star img {
+  width: 25px;
 }
 
-.star span{
-    color: var(--gray-700, #4E5566);
-    font-family: Inter;
-    font-size: 12.996px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18.565px; /* 142.857% */
-    letter-spacing: -0.13px;
+.star span {
+  color: var(--gray-700, #4e5566);
+  font-family: Inter;
+  font-size: 12.996px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.565px; /* 142.857% */
+  letter-spacing: -0.13px;
 }
 
-
-.users{
-
-display: flex;
-align-items: center;
-gap: 5px;
+.users {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-
-.users img{
-    width: 20px;
+.users img {
+  width: 20px;
 }
-.users p{
-    color: var(--gray-700, #4E5566);
-    font-family: Inter;
-    font-size: 12.996px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18.565px; /* 142.857% */
-    letter-spacing: -0.13px;
+.users p {
+  color: var(--gray-700, #4e5566);
+  font-family: Inter;
+  font-size: 12.996px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.565px; /* 142.857% */
+  letter-spacing: -0.13px;
 }
-.users span{
-    color: var(--gray-500, #8C94A3);
-    font-family: Inter;
-    font-size: 12.996px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20.422px; /* 157.143% */
-    letter-spacing: -0.13px;
+.users span {
+  color: var(--gray-500, #8c94a3);
+  font-family: Inter;
+  font-size: 12.996px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.422px; /* 157.143% */
+  letter-spacing: -0.13px;
 }
-
 
 .price {
- display: flex;
- align-items: center;
-    border-top: 1px solid  #E9EAF0 !important;
-    height: 42px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e9eaf0 !important;
+  height: 42px;
 }
-.price h2{
-
-    color: var(--primary-500, #FF6636);
-font-family: Inter;
-font-size: 16.709px;
-font-style: normal;
-font-weight: 600;
-line-height: 22.278px; /* 133.333% */
+.price h2 {
+  color: var(--primary-500, #ff6636);
+  font-family: Inter;
+  font-size: 16.709px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22.278px; /* 133.333% */
 }
 
-
-
-@media screen and (max-width:768px){
-    .Card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 399px;
-        width: 279px;
-        background-color: #fff;
-    }
-
+@media screen and (max-width: 768px) {
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 399px;
+    width: 279px;
+    background-color: #fff;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 358px;
+    width: 240px;
+    background-color: #fff;
+  }
+  .CardDetail {
+    padding: 5px;
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+  }
 }

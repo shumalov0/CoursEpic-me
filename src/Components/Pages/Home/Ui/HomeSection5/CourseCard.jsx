@@ -2,14 +2,22 @@ import React from "react";
 import module from "./HomeSection5.module.css";
 import star from "../../../../Assets/Svg/Star.svg";
 import user from "../../../../Assets/Svg/User.svg";
-import cardimg from '../../../../Assets/picture/cardImg.png'
+import cardimg from "../../../../Assets/picture/cardImg.png";
 
-const CourseCard = () => {
+
+const CourseCard = () => {              
+ 
+
+  
+
   return (
-   
-      <div className={module.Card}>
+
+    <>
+      <div className={module.Card}
+  
+      >
         <div className={module.CardImage}>
-          <img src={cardimg} alt='cardimg' />
+          <img src={cardimg} alt="cardimg" />
         </div>
         <div className={module.CardDetail}>
           <div className={module.cardBox1}>
@@ -32,12 +40,13 @@ const CourseCard = () => {
               <span> students</span>
             </div>
           </div>
-            <div className={module.price}>
-              <h2>24.00 ₼ </h2>
-            </div>
+          <div className={module.price}>
+            <h2>24.00 ₼ </h2>
+          </div>
         </div>
       </div>
-  
+   
+    </>
   );
 };
 

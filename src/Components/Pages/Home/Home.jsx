@@ -5,6 +5,30 @@ import HomeSection2 from './Ui/HomeSection2/HomeSection2'
 import HomeSection3 from './Ui/HomeSection3/HomeSection3'
 import HomeSection4 from './Ui/HomeSection4/HomeSection4'
 import HomeSection5 from './Ui/HomeSection5/HomeSection5'
+
+ const course = [
+  {
+    id:1,
+    category:'Development',
+    courseName: 'Premiere Pro CC for Beginners: Video Editing in Premiere',
+    courseStar: 4.5,
+    coursereting: 200,
+    student: 100,
+    price: 50,
+    mentorPicture: '',
+    mentorName: 'shumalov Intiqam',
+    level: 'beginner',
+    whatyoulearn:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque tempora, perferendis quas eum vero quibusdam.',
+    hour: '4hour',
+    courseLanguage:'azerbaijan',
+    
+
+    
+
+
+  
+  }
+]
 const Home = () => {
   return (
     <>
@@ -18,3 +42,4 @@ const Home = () => {
 }
 
 export default Home
+
