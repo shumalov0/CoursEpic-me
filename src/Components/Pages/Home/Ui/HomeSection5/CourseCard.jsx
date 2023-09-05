@@ -3,7 +3,7 @@ import module from "./HomeSection5.module.css";
 import star from "../../../../Assets/Svg/Star.svg";
 import user from "../../../../Assets/Svg/User.svg";
 import cardimg from "../../../../Assets/picture/cardImg.png";
-
+import { Link } from "react-router-dom";
 
 const CourseCard = () => {              
  
@@ -13,9 +13,8 @@ const CourseCard = () => {
   return (
 
     <>
-      <div className={module.Card}
-  
-      >
+      <div className={module.Card}>
+        <Link to='/course/:id'>
         <div className={module.CardImage}>
           <img src={cardimg} alt="cardimg" />
         </div>
@@ -44,8 +43,16 @@ const CourseCard = () => {
             <h2>24.00 ₼ </h2>
           </div>
         </div>
+        </Link>
+        <div className={module.CardHover}>
+          <div className={module.category}>
+              Developments
+          </div>
+          <div className={module.Name}>
+
+          </div>
+        </div>
       </div>
-   
     </>
   );
 };

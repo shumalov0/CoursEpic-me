@@ -157,6 +157,35 @@
   line-height: 22.278px; /* 133.333% */
 }
 
+.More{
+
+display: flex;
+justify-content: flex-end;
+align-items: end;
+margin-top: 10px;
+
+}
+
+.More a{
+  display: flex;
+  text-decoration: none;
+  width: 146px;
+  padding: 16px 51px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+background: #6C17D6;
+color: #FFF;
+text-align: center;
+font-family: Space Grotesk;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+
+
 @media screen and (max-width: 768px) {
   .Card {
     display: flex;
@@ -166,6 +195,23 @@
     width: 279px;
     background-color: #fff;
   }
+  .More a {
+    display: flex;
+    text-decoration: none;
+    width: 112px;
+    padding: 13px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #6C17D6;
+    color: #FFF;
+    text-align: center;
+    font-family: Space Grotesk;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 }
 @media screen and (max-width: 320px) {
   .Card {

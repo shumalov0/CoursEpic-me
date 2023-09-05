@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import CourseCard from "./CourseCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 const HomeSection5 = () => {
   var settings = {
     dots: false,
@@ -39,6 +40,7 @@ const HomeSection5 = () => {
       }
     ]
   };
+  
   return (
     <>
       <section className={module.HomeSection5}>
@@ -55,7 +57,11 @@ const HomeSection5 = () => {
           <CourseCard/>
         </Slider>
           </div>
+          <div className={module.More}>
+            <Link to='/course' >More</Link>
+          </div>
         </div>
+
       </section>
     </>
   );

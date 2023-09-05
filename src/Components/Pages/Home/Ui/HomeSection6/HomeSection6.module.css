@@ -1,0 +1,35 @@
+
+
+.cardList{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.HomeSection6{
+    background:  #AFE9FF;
+
+}
+
+
+.Main{
+
+    display: flex;
+flex-direction:  column;
+gap: 20px;
+
+}
+
+.Main h2{
+
+    color: #000;
+font-family: Space Grotesk;
+font-size: 36.987px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 44.384px */
+text-transform: capitalize;
+
+}

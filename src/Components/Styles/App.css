@@ -12,11 +12,45 @@
   src: url('../Font/Space_Grotesk/Inter/Inter-VariableFont_slnt\,wght.ttf')
 }
 
+
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+
+
+:root {
+  --border-radius: 7.45px;
+  --badge-border-radius: 3px;
+  --badge-background: #6c17d6;
+  --text-color-on-bg: #ffffff;
+  --text-secondary-color: #524e4e;
+  --text-color-title: #20184e;
+  --font-space-grotesk: "Space Grotesk";
+  --font-jost: "Jost";
+  --font-actor: "Actor";
+  --font-inter: "Inter";
+  --pill-background-color: #f6c55a;
+  --card-shadow: 0px 0.9px 2.8px 0px rgba(0, 0, 0, 0.06),
+    0px 0.9px 1.9px 0px rgba(0, 0, 0, 0.04);
+  --card-background-color: #ffffff;
+  --card-border-color: #eaecf0;
+  --price-strike-color: #d53431;
+  --old-price-color: rgba(0, 0, 0, 0.82);
+  --tooltip-background-color: #101828;
+  --tooltip-border-color: #344054;
+  --tooltip-border-radius: 12px;
+  --play-button-bg-color: #231f20;
+  --mentor-text-color: #161616;
+  --close-button-bg-color: #e2dee9;
+  --video-modal-border-radius: 28px;
+  --video-modal-pp-border-color: #ffda58;
+  --mentor-card-lent-bg-color: #fbf9fead;
+}
+
 
 .container {
   max-width: 1200px;
