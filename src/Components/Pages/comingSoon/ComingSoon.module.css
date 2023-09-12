@@ -1,0 +1,28 @@
+.ComingSoon{
+
+
+    background: linear-gradient(180deg, #AFE9FF 45.31%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+
+.ComingMain{
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.Img{
+
+    display: flex;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Img img{
+    width: 100%;
+
+}

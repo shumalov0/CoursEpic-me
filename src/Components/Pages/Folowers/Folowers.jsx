@@ -1,9 +1,13 @@
 
 import React from 'react'
+import module from './Folowers.module.css'
+import ComingSoon from '../comingSoon/ComingSoon'
 
 const Folowers = () => {
   return (
-    <div>Folowers</div>
+    <>
+       <ComingSoon/>
+    </>
   )
 }
 

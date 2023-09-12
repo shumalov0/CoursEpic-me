@@ -1,9 +1,12 @@
 
 import React from 'react'
 
+import ComingSoon from '../comingSoon/ComingSoon'
 const DigitalMarketing = () => {
   return (
-    <div>DigitalMarketing</div>
+    <div>
+        <ComingSoon/>
+    </div>
   )
 }
 

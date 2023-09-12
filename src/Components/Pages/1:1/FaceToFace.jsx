@@ -1,9 +1,11 @@
 
 import React from 'react'
-
+import  Coming from '../comingSoon/ComingSoon'
 const FaceToFace = () => {
   return (
-    <div>FaceToFace</div>
+    <div>
+      <Coming/>
+    </div>
   )
 }
 
