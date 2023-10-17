@@ -7,46 +7,72 @@ import youtubeLogo from "../../../../../Assets/Svg/youtube-logo.svg";
 import { useState } from "react";
 import { Link  } from "react-router-dom";
 
-const DUMMY_IMAGE =
-    "https://fastly.picsum.photos/id/630/600/800.jpg?hmac=P4lxgGrWr1s5GjIRuFW7HskbXTeRAIepLa1CkVXTEB4";
+import teacher1 from '../../../../../Assets/picture/teacher1.jpeg'
+import teacher2 from '../../../../../Assets/picture/teacher2.jpeg'
+import teacher3 from '../../../../../Assets/picture/teacher3.jpeg'
 
     
-const  MentorCard = () => {
+
+
+const  MentorCard = (img) => {
+    const Teachers =[
+
+
+        {
+            id:1,
+            img:teacher1
+        },
+        {
+            id:2,
+            img:teacher2
+        },
+        {
+            id:3,
+            img:teacher3
+        },
+    
+    
+    ]
     // const [show, setShow] = useState(false);
 
     // const closeHandler = () => setShow(false);
     // const openHandler = () => setShow(true);
+ 
 
     return (
         <>
-            {/* <VideoModal show={show} closeHandler={closeHandler} /> */}
-            <div className={styles.mentorCard}>
-                <div  className={styles.thumbnail}>
-                    <img
-                        className={styles.thumbnailPhoto}
-                        src={DUMMY_IMAGE}
-                        alt="some of something"
-                    />
+         
+                 <div className={styles.mentorCard} >
+                            <div  className={styles.thumbnail}>
+                                
+                            
+                                    <img
+                                        className={styles.thumbnailPhoto}
+                                        src={img.img}
+                                        alt="some of something"
+                                    />
+                                
+                            
 
-                </div>
-                <div className={styles.aboutMentor}>
-                    <div className={styles.info}>
-                        <h5>Ad Soyad</h5>
-                        <h6>Front-End Developer</h6>
-                    </div>
-                    <div className={styles.socials}>
-                        <Link to="/course" div className={styles.social}>
-                            <img src={youtubeLogo} alt="social media logo" />
-                        </Link>
-                        <Link to="/course" className={styles.social}>
-                            <img src={tiktokLogo} alt="social media logo" />
-                        </Link>
-                        <Link to="/course" className={styles.social}>
-                            <img src={instagramLogo} alt="social media logo" />
-                        </Link>
-                    </div>
-                </div>
-            </div>
+                            </div>
+                            <div className={styles.aboutMentor}>
+                                <div className={styles.info}>
+                                    <h5>Ad Soyad</h5>
+                                    <h6>Front-End Developer</h6>
+                                </div>
+                                <div className={styles.socials}>
+                                    <Link to="/course" div className={styles.social}>
+                                        <img src={youtubeLogo} alt="social media logo" />
+                                    </Link>
+                                    <Link to="/course" className={styles.social}>
+                                        <img src={tiktokLogo} alt="social media logo" />
+                                    </Link>
+                                    <Link to="/course" className={styles.social}>
+                                        <img src={instagramLogo} alt="social media logo" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
         </>
     );
 };

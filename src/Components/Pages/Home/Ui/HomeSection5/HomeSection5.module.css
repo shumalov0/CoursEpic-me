@@ -10,7 +10,10 @@
   width: 290px;
   background-color: #fff;
 }
+.Card a{
+  text-decoration: none;
 
+}
 .CardImage {
   max-width: 290px;
   max-height: 217.211px;

@@ -13,6 +13,18 @@ import { GrClose } from "react-icons/gr";
 
 
 const Header = () => {
+
+  const toggleMenu = () => {
+    setOpenButton(!closeButton);
+    if (!closeButton) {
+      <FaBars/>
+      document.body.style.overflow = 'hidden';
+    } else {
+      <GrClose/>
+      document.body.style.overflow = 'auto';
+    }
+  };
+
   useEffect(()=>{
  
 
@@ -131,7 +143,7 @@ const Header = () => {
               >
                 <span ref={buttonRef} onClick={() => setOpen((prev) => !prev)}>
                
-                  Product
+                Məhsullar
                 </span>
                 {!open ? (
                   <img src={top} alt="Top" />
@@ -156,9 +168,9 @@ const Header = () => {
                 </div>
               )}
 
-              <Link onClick={()=>setOpenButton(false)} to="/career"> Career</Link>
-              <Link onClick={()=>setOpenButton(false)} to="/about"> About</Link>
-              <Link onClick={()=>setOpenButton(false)} to="/price"> Qiymətləndirmə</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/career"> Karyera</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/about"> Haqqımızda</Link>
+              <Link onClick={()=>setOpenButton(false)} to="/price"> Təlimçi ol</Link>
               <div>
                 <Buttonn />
               </div>
@@ -192,12 +204,15 @@ const Header = () => {
                 ))}
               </div>
             )}
-            <div  onClick={()=>setOpenButton(!closeButton)}  className={module.bar} >
+            <div  onClick={toggleMenu} className={module.bar} >
               
                   {!closeButton ?
-                  ( <FaBars/>):
-                  (<GrClose/>)
+                   <FaBars/>
+                  :
+                  <GrClose/>
                   }
+
+                 
       
               
             </div>

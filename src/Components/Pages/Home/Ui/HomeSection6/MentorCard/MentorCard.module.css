@@ -7,8 +7,10 @@
     cursor: pointer;
 }
 
+
 .thumbnailPhoto {
     height: 400px;
+    max-width: 280px;
     width: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);

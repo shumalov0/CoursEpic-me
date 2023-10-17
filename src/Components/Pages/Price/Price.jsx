@@ -1,9 +1,12 @@
 
 import React from 'react'
-
+import ComingSoon from '../comingSoon/ComingSoon'
 const Price = () => {
   return (
-    <div>Price</div>
+    <>
+      <ComingSoon/>
+
+    </>
   )
 }
 
